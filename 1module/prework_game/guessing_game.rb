@@ -6,7 +6,7 @@
 puts "I've generated a random number for you to guess, what is your guess?"
 print ">"
 guess = $stdin.gets.chomp
-puts guess.to_i
+guess.to_i
 
 number = 8
 
