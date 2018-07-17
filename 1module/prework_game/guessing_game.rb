@@ -6,16 +6,16 @@
 puts "I've generated a random number for you to guess, what is your guess?"
 print ">"
 guess = $stdin.gets.chomp
-guess.to_i
+guess_number = guess.to_i
 
 number = 8
 
-if guess == number
+if guess_number == number
   puts "You got it, well done!"
-elsif guess > number
+elsif guess_number > number
   puts "Too high"
-elsif guess < number
+elsif guess_number < number
   puts "Too Low"
 else
-  puts "I don't even know what's happening here. %s, really?" %guess
+  puts "I don't even know what's happening here. %s, really?" %guess_number
 end
