@@ -1,13 +1,12 @@
 def start
   puts "You are in an elaborately furnished anteroom."
   puts "You have arrived fashionably late to an insufferable society party."
-  puts "You are our heroine, of course. A strong female character who flouts
-  convention and is not quite pretty but irresistable to most people."
+  puts "You are our heroine, of course. A strong female character who flouts convention and is not quite pretty but irresistable to most people."
   puts "There is a door on your right and one on your left."
   puts "Which one do you choose?"
 
   print "> "
-  choice = $stdin.gets.chomp
+  choice = $stdin.gets.chomp.downcase
 
   if choice == "left"
     salon
@@ -21,12 +20,11 @@ end
 
 def salon
   puts "You arrive in a brightly lit salon. The air is full of conversation and chamber music."
-  puts "There are two groups gathered near you, a collection of intellectuals
-  and bluestockings and a cluster of little old ladies."
+  puts "There are two groups gathered near you, a collection of intellectuals and bluestockings and a cluster of little old ladies."
   puts "Who do you talk to?"
 
   print "> "
-  talk = $stdin.gets.chomp
+  talk = $stdin.gets.chomp.downcase
 
   if talk == "intellectuals"
     puts "The clever set rebuff your attempts to join their conversation, as you are too young and rich to
@@ -48,14 +46,14 @@ def library
   puts "There is a comfy looking chair beside the fire. Do you sit or look at all the books?"
 
   print "> "
-  answer = $stdin.gets.chomp
+  answer = $stdin.gets.chomp.downcase
 
   if answer == "look"
     puts "You examine all the spines and accidentally uncover a secret passage."
     puts "Do you go through?"
 
     print "> "
-    passage = $stdin.gets.chomp
+    passage = $stdin.gets.chomp.downcase
 
     if passage == "yes"
       secret_passage
@@ -72,20 +70,18 @@ end
 
 def secret_passage
   puts "The secret passage is dusty and filled with cobwebs."
-  puts "You are not frightened, of course. Your late father was a gentleman
-  naturalist and made sure you had an unconventional education - including studying bugs."
+  puts "You are not frightened, of course. Your late father was a gentleman naturalist and made sure you had an unconventional education - including studying bugs."
   puts "You open the door at the other end of the passage..."
   disused_room
 end
 
 def disused_room
-  puts "You arrive in a musty, disused room. Heavy fabric covers all the furniture
-  and the floor creaks beneath your feet."
+  puts "You arrive in a musty, disused room. Heavy fabric covers all the furniture and the floor creaks beneath your feet."
   puts "There seems to be some kind of altar in front of the fireplace."
   puts "Do you approach?"
 
   print "> "
-  brave = $stdin.gets.chomp
+  brave = $stdin.gets.chomp.downcase
 
   if brave == "yes"
     magical_macguffin
@@ -112,7 +108,7 @@ def conservatory
   puts "And beats mountain down."
 
   print "> "
-  answer = $stdin.gets.chomp
+  answer = $stdin.gets.chomp.downcase
 
   if answer == "time"
     puts "The gryphon bows to you and stands aside"
@@ -128,7 +124,7 @@ def ball_room
   puts "A young man approaches, hoping to dance. Do you grant him the pleasure?"
 
   print "> "
-  dance = $stdin.gets.chomp
+  dance = $stdin.gets.chomp.downcase
 
   if dance == "yes"
     puts "A feverish country dance begins and you are spun around and around and around..."
@@ -144,7 +140,7 @@ def staircase
   puts "From here you can go up or down"
 
   print "> "
-  direction = $stdin.gets.chomp
+  direction = $stdin.gets.chomp.downcase
 
   if direction == "up"
     puts "You carefully ascend the staircase"
@@ -165,16 +161,14 @@ def kitchen
 end
 
 def magical_macguffin
-  puts "Upon the altar you see an engraved dagger with a large ruby in the hilt. It pulses with energy and seems
-  to be calling to you"
+  puts "Upon the altar you see an engraved dagger with a large ruby in the hilt. It pulses with energy and seems to be calling to you"
   puts "Do you take it?"
 
   print "> "
-  take = $stdin.gets.chomp
+  take = $stdin.gets.chomp.downcase
 
   if take == "yes"
-    puts "The dagger is warm in your hand. As you turn away from the altar, a
-    group of elaborately dressed and very attractive young people appear."
+    puts "The dagger is warm in your hand. As you turn away from the altar, a group of elaborately dressed and very attractive young people appear."
     puts "One of them says, 'At last, the chosen one has come! Come with us, leave your stuffy society existence"
     puts "and embrace your true destiny. Let us shower you with riches and excitement and adventure. You'll probably make out with a few of us too."
     puts "It's basically everything you've ever wanted, so you join them immediately."
