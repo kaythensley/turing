@@ -182,7 +182,17 @@ def magical_macguffin
 def over(why)
   puts why
   puts "The life of an heiress is so difficult."
-  exit(0)
+
+  print "Would you like to try again?"
+  puts "> "
+  play = $stdin.gets.chomp.downcase
+
+  if play == "yes"
+    start
+  else
+    puts "Maybe you should just lay down for a bit."
+    exit(0)
+  end
 end
 
 def winner(yay)
